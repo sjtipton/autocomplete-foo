@@ -41,6 +41,12 @@
                       <v-text-field label="Phone" outlined v-model="phoneNumber" placeholder="Phone"></v-text-field>
                     </v-col>
                   </v-row>
+
+                  <v-row>
+                    <v-col>
+                      <v-btn color="primary" @click="submit">Submit</v-btn>
+                    </v-col>
+                  </v-row>
                 </v-container>
               </v-card>
             </v-col>
@@ -68,6 +74,10 @@ export default {
     }
   },
   methods: {
+    submit: function () {
+      const { userName, email, firstName, lastName, phoneNumber } = this
+      console.log('values', userName, email, firstName, lastName, phoneNumber)
+    }
   }
 }
 </script>
